@@ -1,14 +1,17 @@
 import React from 'react';
-import './Header.css'; // Create a CSS file for styling this component
+import './Header.css'; 
+import header from '../images/header.jpg';
+import logo from '../images/YAClogo.webp';
 
 const Header = () => {
   return (
     <header>
       <div className="header_container">
         <h1 className="header_logo">
-          <img src="/assets/img/YAClogo.webp" alt="Yokoteyama Archery Club" />
+          <img src={header} alt="Yokoteyama Archery Club" />
         </h1>
         <nav>
+        <img src={logo} alt="Yokoteyama Archery Club" />
           <a href="#introduction">Introduction</a>
           <a href="#photos">Photos</a>
           <a href="#lessons">Lessons</a>

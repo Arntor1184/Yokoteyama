@@ -1,0 +1,31 @@
+/* Photos.css */
+.swiper {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+  
+  .swiper-button-prev, .swiper-button-next {
+    color: white;
+  }
+  
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+  
