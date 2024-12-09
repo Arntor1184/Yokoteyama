@@ -1,47 +1,69 @@
-
+/* Header container */
 .header_container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #333;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .header_logo img {
-    max-height: 50px;
+  /* Sticky header */
+  .sticky-header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  /* Logo styling */
+  .logo {
+    height: 50px; /* Adjust the size of the logo */
+    margin-right: 20px;
+  }
+  
+  /* Navigation bar styling */
+  nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
   
   nav a {
-    color: white;
-    margin: 0 15px;
     text-decoration: none;
+    color: #333;
     font-weight: bold;
+    transition: color 0.3s ease;
   }
   
   nav a:hover {
-    text-decoration: underline;
+    color: #007acc;
   }
   
+  /* Search container styling */
   .search-container {
     display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
   #search-bar {
-    padding: 8px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
+    padding: 5px;
+    border: 1px solid #ddd;
     border-radius: 4px;
   }
   
   button {
-    padding: 8px 15px;
-    background-color: #007bff;
+    padding: 5px 10px;
+    background-color: #007acc;
     color: white;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #005f99;
   }
   

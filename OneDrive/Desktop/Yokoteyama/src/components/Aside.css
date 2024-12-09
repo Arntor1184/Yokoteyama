@@ -1,40 +1,16 @@
-/* Aside.css */
-.aside_section {
-    position: fixed;
-    top: 20px;
-    right: 0;
-    width: 300px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  h2, h3 {
-    color: #333;
-  }
-  
-  .weather-widget, .youtube-video, .access-map {
-    margin-bottom: 20px;
-  }
-  
-  iframe {
-    border-radius: 5px;
-  }
-  
-  .weather-widget iframe,
-  .youtube-video iframe,
-  .access-map iframe {
-    border: none;
-  }
-  
-  h3 {
-    margin-bottom: 10px;
-  }
-  
-  
-  .aside_section {
-    max-width: 350px;
-    width: 100%;
-  }
-  
+/* Styling for the Weather Widget, YouTube Video, and Access Map */
+.weather-widget, .youtube-video, .access-map {
+  margin-bottom: 20px; /* Space between each iframe section */
+}
+
+iframe {
+  width: 100%; /* Ensures iframe takes up full width of container */
+  height: 200px; /* Set a fixed height for consistency */
+  border: none;  /* Remove any borders around the iframe */
+}
+
+/* Optional: Style the headings for better appearance */
+.weather-widget h3, .youtube-video h3, .access-map h3 {
+  font-size: 1.2rem;  /* Larger headings for visibility */
+  margin-bottom: 10px; /* Space below headings */
+}

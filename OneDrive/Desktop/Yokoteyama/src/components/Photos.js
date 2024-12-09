@@ -1,47 +1,41 @@
 import React from 'react';
-import Swiper from 'swiper';
-import 'swiper/css'; // Keep this import only
-import './Photos.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules'; // Correct import path
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import './Photos.css'; 
+import photo1 from '../images/Yokoteyama1.jpg'
+import photo2 from '../images/Yokoteyama2.jpg'
+import photo3 from '../images/Yokoteyama3.jpg'
 
-const Photos = () => {
-  React.useEffect(() => {
-    const swiper = new Swiper('.swiper', {
-      direction: 'horizontal',
-      loop: true,
-      pagination: { el: '.swiper-pagination' },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      scrollbar: { el: '.swiper-scrollbar' },
-    });
-  }, []);
-
+const MySwiper = () => {
   return (
     <section id="photos">
       <h2>Photos</h2>
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <img src="/assets/images/Yokoteyama1.jpg" alt="Forests for Archery" />
-            <div className="carousel-caption">Forests for Archery</div>
-          </div>
-          <div className="swiper-slide">
-            <img src="/assets/images/Yokoteyama2.jpg" alt="May your aim be true" />
-            <div className="carousel-caption">May your aim be true</div>
-          </div>
-          <div className="swiper-slide">
-            <img src="/assets/images/Yokoteyama3.jpg" alt="Hammerfist the cruel" />
-            <div className="carousel-caption">Hammerfist the Cruel</div>
-          </div>
-        </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-scrollbar"></div>
-      </div>
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay, Scrollbar]} // Add modules here
+      direction="horizontal"
+      loop={true}
+      pagination={{ clickable: true }}
+      navigation={true}
+      scrollbar={{ draggable: true }}
+      autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay configuration
+    >
+      <SwiperSlide>
+      <img src={photo1} alt="Beautiful view" className="photo1" />
+      </SwiperSlide>
+      <SwiperSlide>
+      <img src={photo2} alt="Beautiful view" className="photo1" />
+      </SwiperSlide>
+      <SwiperSlide>
+      <img src={photo3} alt="Beautiful view" className="photo1" />
+      </SwiperSlide>
+    </Swiper>
     </section>
   );
 };
 
-export default Photos;
+export default MySwiper;
+
