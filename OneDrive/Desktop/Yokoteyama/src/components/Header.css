@@ -1,4 +1,4 @@
-/* Header container */
+
 .header_container {
     display: flex;
     align-items: center;
@@ -9,13 +9,13 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-/* Add this to your Header.css */
+
 .highlight {
-  background-color: yellow; /* Change to any color you like */
+  background-color: yellow; 
 }
 
 
-  /* Sticky header */
+  
   .sticky-header {
     position: fixed;
     top: 0;
@@ -23,13 +23,13 @@
     width: 100%;
   }
   
-  /* Logo styling */
+  
   .logo {
-    height: 50px; /* Adjust the size of the logo */
+    height: 50px; 
     margin-right: 20px;
   }
   
-  /* Navigation bar styling */
+  
   nav {
     display: flex;
     gap: 20px;
@@ -47,7 +47,7 @@
     color: #007acc;
   }
   
-  /* Search container styling */
+ 
   .search-container {
     display: flex;
     align-items: center;

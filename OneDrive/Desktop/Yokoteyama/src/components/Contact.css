@@ -70,3 +70,27 @@ form {
     background-color: #0056b3;
   }
   
+  .radio-group {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 16px; 
+  }
+  
+  .radio-group span {
+    margin-right: 10px; 
+  }
+  
+  .radio-group label {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    margin: 0; 
+  }
+  
+  .radio-group input[type="radio"] {
+    margin: 0; 
+  }
+  
+  
+  

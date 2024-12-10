@@ -1,22 +1,19 @@
-import React, { useState } from 'react'; // Importing useState hook
+import React, { useState } from 'react';
 import './Aside.css';
 
 const Aside = () => {
-  // Hook to toggle visibility of widgets
   const [showWeather, setShowWeather] = useState(true);
   const [showVideo, setShowVideo] = useState(true);
   const [showMap, setShowMap] = useState(true);
 
-  // Toggle functions for each section
   const toggleWeather = () => setShowWeather(prev => !prev);
   const toggleVideo = () => setShowVideo(prev => !prev);
   const toggleMap = () => setShowMap(prev => !prev);
 
   return (
     <aside className="aside_section">
-      <h2>Hello Kinakochan</h2>
+      <h2>Extra Information</h2>
       
-      {/* Weather Widget */}
       <div className="weather-widget">
         <h3>Weather Forecast</h3>
         {showWeather && (
@@ -33,7 +30,6 @@ const Aside = () => {
         </button>
       </div>
       
-      {/* YouTube Video */}
       <div className="youtube-video">
         <h3>Watch This Video</h3>
         {showVideo && (
@@ -52,7 +48,6 @@ const Aside = () => {
         </button>
       </div>
 
-      {/* Access Map */}
       <div className="access-map">
         <h3>Our Location</h3>
         {showMap && (

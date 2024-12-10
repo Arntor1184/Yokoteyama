@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules'; // Correct import path
+import { Navigation, Pagination, Autoplay, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -15,13 +15,13 @@ const MySwiper = () => {
     <section id="photos">
       <h2>Photos</h2>
     <Swiper
-      modules={[Navigation, Pagination, Autoplay, Scrollbar]} // Add modules here
+      modules={[Navigation, Pagination, Autoplay, Scrollbar]} 
       direction="horizontal"
       loop={true}
       pagination={{ clickable: true }}
       navigation={true}
       scrollbar={{ draggable: true }}
-      autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay configuration
+      autoplay={{ delay: 3000, disableOnInteraction: false }} 
     >
       <SwiperSlide>
       <img src={photo1} alt="Beautiful view" className="photo1" />

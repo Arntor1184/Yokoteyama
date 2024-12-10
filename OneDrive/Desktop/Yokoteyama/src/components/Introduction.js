@@ -6,7 +6,6 @@ import ArthurImage from '../images/Arthur.jpeg';
 const Introduction = () => {
   return (
     <>
-      {/* Introduction Section */}
       <section id="introduction">
         <h2>Welcome to the Yokoteyama Archery Club</h2>
         <div className="introduction_container">

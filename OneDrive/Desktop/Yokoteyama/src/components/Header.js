@@ -15,17 +15,17 @@ const Header = ({ navLinks }) => {
     let matchFound = false;
     setNoResults(false);
 
-    // Remove any previous highlights
+    
     const highlightedElements = document.querySelectorAll('.highlight');
     highlightedElements.forEach((element) => {
       element.classList.remove('highlight');
     });
 
-    // Search the entire page (excluding header)
+    
     const pageContent = document.body;
     const matches = [];
 
-    // Recursively search through all child nodes (text content)
+    
     const searchNode = (node) => {
       if (node.nodeType === Node.TEXT_NODE) {
         const matchIndex = node.textContent.toLowerCase().indexOf(searchQuery.toLowerCase());
@@ -37,29 +37,29 @@ const Header = ({ navLinks }) => {
           const textBeforeMatch = node.textContent.substring(0, matchIndex);
           const textAfterMatch = node.textContent.substring(matchIndex + searchQuery.length);
 
-          // Replace the text with the highlighted span
+          
           const newNode = document.createTextNode(textBeforeMatch);
           node.parentNode.insertBefore(newNode, node);
           node.parentNode.insertBefore(span, node);
           node.parentNode.insertBefore(document.createTextNode(textAfterMatch), node);
           node.parentNode.removeChild(node);
           
-          matches.push(span); // Add match to list for scrolling
+          matches.push(span); 
         }
       } else if (node.nodeType === Node.ELEMENT_NODE) {
-        node.childNodes.forEach(searchNode); // Recursively search through all child nodes
+        node.childNodes.forEach(searchNode); 
       }
     };
 
-    searchNode(pageContent); // Start searching through the page
+    searchNode(pageContent); 
 
     if (matches.length > 0) {
       matchFound = true;
-      matches[0].scrollIntoView({ behavior: 'smooth' }); // Scroll to first match
+      matches[0].scrollIntoView({ behavior: 'smooth' }); 
     }
 
     if (!matchFound) {
-      setNoResults(true); // If no matches found, show no results message
+      setNoResults(true); 
     }
   };
 
@@ -84,7 +84,7 @@ const Header = ({ navLinks }) => {
           )}
         </nav>
 
-        {/* Search bar */}
+      
         <div className="search-container">
           <input
             type="text"
@@ -98,7 +98,7 @@ const Header = ({ navLinks }) => {
           </button>
         </div>
 
-        {noResults && <p>No results found</p>} {/* Display message if no match is found */}
+        {noResults && <p>No results found</p>} 
       </div>
     </header>
   );
