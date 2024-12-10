@@ -9,6 +9,12 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
+/* Add this to your Header.css */
+.highlight {
+  background-color: yellow; /* Change to any color you like */
+}
+
+
   /* Sticky header */
   .sticky-header {
     position: fixed;
